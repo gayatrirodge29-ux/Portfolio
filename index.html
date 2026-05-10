@@ -35,7 +35,7 @@
             justify-content: space-between;
             align-items: center;
             z-index: 100;
-            background-color: #32415f;
+            background-color: #243e72;
         }
 
         .logo{
@@ -85,8 +85,9 @@
         }
 
         .home-content h1{
-            font-size: 32px;
+            font-size: 40px;
             font-weight: 700;
+            color: #2ec7e9f7;
 
         }
         .home-content h1 span{
@@ -211,11 +212,6 @@
             padding: 90px;
         
         }
-        .sub-title{
-            text-align: center;
-            font-size: 60px;
-            padding-bottom: 70px;
-        }
         .sub-title span{
             color: #0ef;
         }
@@ -272,48 +268,208 @@
             box-shadow: 0 0 20px #0ef;
         }
 
-        .section{
-            /* display: flex;
-            flex-wrap: wrap; */
-            padding: 50px;
-
-        }
         .container1{
-            width: 100%;
-            height: 200px;
-            padding: 50px;
-            /* margin-left: 120px; */
+            width: 600;
+            margin-left: 12px;
+            padding: 75px 90px ;
+            height: 500px;
+            
         }
+        .section{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .bar{
+            font-size: 23px;
+        }
+        .Technical-bars{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+        .sub-title1{
+            text-align: center;
+            font-size: 60px;
+        }
+        
         .heading1{
             text-align: center;
             text-decoration: underline;
             text-underline-offset: 10px;
-            text-decoration-thickness: 10px;
+            text-decoration-thickness: 5px;
             margin-bottom: 50px;
         }
-        .bar{
-            font-size: 23px;
-            padding: 20px;
-            text-align: center;
-            box-shadow: 0 0 15px #0ef;
-            border-radius: 15px;
-
+        .Technical-bars .bar{
+            margin-top: 40px 0;
         }
-        .bar i{
-            font-size: 50px;
+        .Technical-bars .bar .info{
+            margin-bottom: 5px;
+        }
+        .Technical-bars .bar:first-child{
+            margin-top: 0;
+        }
+        .Technical-bars .bar:last-child{
+            margin-bottom: 0;
+        }
+        .Technical-bars .bar .info span{
+            font-size: 18px;
+            font-weight: 500;
+            animation: showText 0.5s 1s linear forwards;
+            opacity: 0;
+        }
+        .Technical-bars .bar .progress-line{
+            position: relative;
+            border-radius: 10px;
+            width: 80%;
+            height: 5px;
+            background-color: #000000;
+            animation: animate 1s  forwards;
+            transform: scaleX(0);
+            transform-origin: left;
+        }
+        .Technical-bars .bar .progress-line span{
+            height: 100%;
+            background-color: #0ef;
+            position: absolute;
+            border-radius: 10px;
+            animation: animate 1s 1s  forwards;
+            transform: scaleX(0);
+            transform-origin: left;
+            
+        }
+        .progress-line.java span{width: 90%;}
+        .progress-line.html span{width: 95%;}
+        .progress-line.css span{width: 90%;}
+        .progress-line.javascript span{width: 85%;}
+        .progress-line.spring span{width: 80%;}
+        .progress-line.react span{width: 90%;}
+        .progress-line.github span{width: 95%;}
+        .progress-line.sql span{width: 90%;}
+
+        .contact{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            align-items: center;
+            gap: 3rem;
+            padding-left: 30px;
+            margin-top: 130px;
+        }
+        .contact-text h2{
+           font-size: 90px;
+           line-height: 1;
+           text-align: center; 
+           color: #0ef;   
+        }
+        .contact-text h4{
+            margin: 15px 0;
+            color: rgb(228,228,177);
+            line-height: 30px;
+            margin-bottom: 2rem;
+        }
+        .contact-list{
+            margin-bottom: 3rem;
+        }
+        .contact-list li{
             margin-bottom: 10px;
             display: block;
+        }
+        .contact-list i{
+            display: inline-block;
+            color: #0ef;
+            font-size: 20px;
+            font-weight: 600;
+            transition: all .40s ease;
 
         }
-        .bar span{
-            font-size: 18px;
-            font-weight: 600;
+        .contact-list li a:hover{
+            transform: scale(1.01) translateY(-5px);
+            color: #0ef;
         }
-        .technical-bars {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
+        .contact-icons i{
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            background: transparent;
+            border: 2px solid #0ef;
+            border-radius: 50%;
+            font-size: 20px;
+            color: #0ef;
+            text-decoration: none;
+            margin: 30px 15px 30px 0;
         }
+        .contact-icons i:hover{
+            background: #0ef;
+            color: #000;
+            box-shadow: 0 0 20px #0ef;
+        }
+        .contact-form form{
+            position: relative;
+    
+        }
+        .contact-form form input,form textarea{
+            border: none;
+            outline: none;
+            width: 70%;
+            padding: 18px;
+            background: #e4e4ea;
+            color: #000;
+            font-size: 20px;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+            border-radius: 0.5rem;
+        }
+        .contact-form textarea{
+            resize:none;
+            height: 200px;
+        }
+        .contact-form form .contact-icons{
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            background: transparent;
+            border: 2px solid #0ef;
+            border-radius: 50%;
+            font-size: 20px;
+            color: #0ef;
+            text-decoration: none;
+            margin: 30px 15px 30px 0;
+        }
+        .contact-form form .send:hover{
+            box-shadow: 0 0 5px cyan,
+            0 0 25px cyan, 0 0 50px cyan,
+            0 0 100px cyan, 0 0 200px cyan
+        }
+
+        
+
+        @keyframes animate{
+            100%{
+                transform: scaleX(1);
+            }
+        }
+        @keyframes showText{
+            100%{
+                opacity: 1;
+            }
+        }
+
+        @keyframes skillAnimate{
+            from{
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to{
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+
+    
         
 
         
@@ -357,11 +513,11 @@
         <a href="#" class="logo" >Portfolio</a>
 
         <nav class="navbar">
-            <a href="#" >Home</a>
-            <a href="#" >About</a>
-            <a href="#" >Skills</a>
-            <a href="#" >Projects</a>
-            <a href="#" >Contact</a>
+            <a href="#home" >Home</a>
+            <a href="#about" >About</a>
+            <a href="#skills" >Skills</a>
+            <a href="#services" >Projects</a>
+            <a href="#contact" >Contact</a>
             <hr>
         </nav>
     </header>
@@ -373,10 +529,10 @@
             <p> I have skills in frontend and backend technologies and love creating modern, responsive websites.</p>
 
             <div class="home-sci">
-                <a href="#"><i class="bx bxl-linkedin"></i></a>
-                <a href="#"><i class="bx bxl-github"></i></a>
-                <a href="#"><i class="bx bxl-whatsapp"></i></a>
-                <a href="#"><i class="bx bxl-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/gayatri-rodge-a23764346"><i class="bx bxl-linkedin"></i></a>
+                <a href="https://github.com/gayatrirodge29-ux"><i class="bx bxl-github"></i></a>
+                <a href="https://wa.me/917248900421"><i class="bx bxl-whatsapp"></i></a>
+                <a href="https://instagram.com/gau_rodge_03"><i class="bx bxl-instagram"></i></a>
             </div>
             <a href="#" class="btn-box">More about me</a>
         </div>
@@ -404,16 +560,15 @@
     
     </section>
 
-    <h1 class="sub-title">My Skills</h1>
     <section >
         <div class="container1" id="skills">
-            <h1 class="heading">Technical Skills</h1>
-            <div class="Technical-bars">
+            <h1 class="heading1">Technical Skills</h1>
+            <div class="Technical-bars ">
                 <div class="bar"><i class="devicon-java-plain colored"></i>
                     <div class="info">
                         <span>Java</span>
                     </div>
-                <div class="progress-line Java">
+                <div class="progress-line java">
                     <span></span>
                 </div>
             </div>
@@ -440,7 +595,7 @@
                     <div class="info">
                         <span>JavaScript</span>
                     </div>
-                <div class="progress-line Javascript">
+                <div class="progress-line javascript">
                     <span></span>
                 </div>
             </div>
@@ -449,7 +604,7 @@
                     <div class="info">
                         <span>Spring & SpringBoot</span>
                     </div>
-                <div class="progress-line Springboot">
+                <div class="progress-line spring">
                     <span></span>
                 </div>
             </div>
@@ -458,16 +613,7 @@
                     <div class="info">
                         <span>React Js</span>
                     </div>
-                <div class="progress-line React Js">
-                    <span></span>
-                </div>
-            </div>
-
-            <div class="bar"><i class="devicon-bootstrap-plain colored"></i>
-                    <div class="info">
-                        <span>BootStrap</span>
-                    </div>
-                <div class="progress-line Bootstrap">
+                <div class="progress-line react">
                     <span></span>
                 </div>
             </div>
@@ -476,7 +622,7 @@
                     <div class="info">
                         <span>Git & GitHub</span>
                     </div>
-                <div class="progress-line Git & Github">
+                <div class="progress-line github">
                     <span></span>
                 </div>
             </div>
@@ -485,7 +631,7 @@
                     <div class="info">
                         <span>SQL</span>
                     </div>
-                <div class="progress-line SQL">
+                <div class="progress-line sql">
                     <span></span>
                 </div>
             </div>
@@ -498,40 +644,62 @@
     <section>
         <div class="services" id="services">
             <div class="container">
-                <h1 class="sub-title">My<span>Skills</span></h1>
+                <h1 class="sub-title">My<span>Projects</span></h1>
                 <div class="services-list">
                     <div>
                         <i class="bi bi-person-circle" style="color: #00eeff;"></i>
-                        <h2>UI/UX Desing</h2>
-                        <p>I enjoy designing intuitive and attractive user interfaces with a strong focus on user experience, usability, and responsive design.</p>
+                        <h2>My Portfolio</h2>
+                        <p>A portfolio project is a personal project that showcases your skills, projects, education, and contact details—basically your professional highlight reel on the web.</p>
                         <a href="#" class="read">Learn More</a>
                     </div>
 
                     <div>
                         <i class="bi bi-display" style="color: #00eeff;"></i>
-                        <h2>Frontend Developer</h2>
-                        <p>I am a Frontend Developer focused on building responsive and user-friendly websites using HTML, CSS, JavaScript, Bootstrap, and React.</p>
-                        <a href="#" class="read">Learn More</a>
-                    </div>
-
-                    <div>
-                        <i class="bi bi-database-fill-check" style="color: #00eeff;"></i>
-                        <h2>Backend Developer</h2>
-                        <p> I am a Backend Developer skilled in Java, Spring Boot, Hibernate, and MySQL, focused on building efficient server-side applications and APIs.</p>
+                        <h2>IOT Based Patient Monitoring</h2>
+                        <p>An IoT-based Patient Monitoring System is a project where patient health data is collected using sensors and sent over the internet so doctors or caregivers can monitor the patient remotely.</p>
                         <a href="#" class="read">Learn More</a>
                     </div>
 
                     <div>
                         <i class="bi bi-gear-fill" style="color: #00eeff;"></i>
-                        <h2>Full Stack Developer</h2>
-                        <p> I am a passionate Full Stack Developer with knowledge of frontend and backend technologies including HTML, CSS, JavaScript, Bootstrap, React, Java, Spring Boot, Hibernate, and MySQL. 
-                        </p>
+                        <h2>Smart Irrigation System</h2>
+                        <p> A Smart Irrigation System is an IoT-based project that automatically waters plants or crops based on soil and environmental conditions.</p>
                         <a href="#" class="read">Learn More</a>
                     </div>
+
                 </div>
             </div>
         </div>
 
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="contact-text">
+            <h2>Contact Me</h2>
+            <h4>Let's Work Together.</h4>
+            <p>I'm always open to new opportunities, collaborations, and interesting projects. 
+              You can contact me through email, LinkedIn, or GitHub.</p>
+              <div class="contact-list">
+                <li><i class="bx bxs-send"></i>gayatrirodge29@gmail.com</li>
+                <li><i class="bx bxs-phone"></i>7248900421</li>
+              </div>
+              <div class="contact-icons">
+                <a href="https://www.linkedin.com/in/gayatri-rodge-a23764346"><i class="bx bxl-linkedin"></i></a>
+                <a href="https://github.com/gayatrirodge29-ux"><i class="bx bxl-github"></i></a>
+                <a href="https://wa.me/917248900421"><i class="bx bxl-whatsapp"></i></a>
+                <a href="https://instagram.com/gau_rodge_03"><i class="bx bxl-instagram"></i></a>
+              </div>
+        </div>
+
+        <div class="contact-form">
+            <form action="">
+                <input type="" placeholder="enter your name" required>
+                <input type="email" placeholder="enter the email" required>
+                <input type="" placeholder="enter your subject">
+                <textarea name="" id="" cols="40" rows="10" placeholder="enter your message"></textarea>
+                <input type="submit" value="submit" class="send">
+            </form>
+        </div>
     </section>
     
 
@@ -555,6 +723,23 @@
             aboutText.classList.add("show")
         }
 
+    });
+
+    window.addEventListener("scroll", function(){
+
+        let skills = document.querySelectorAll(".Technical-bars .bar");
+        let skillsSection = document.querySelector(".Technical-bars");
+
+        let position = skillsSection.getBoundingClientRect().top;
+        let screenPosition = window.innerHeight / 1.3;
+
+        if(position < screenPosition){
+            skills.forEach((skill, index)=>{
+                setTimeout(() => {
+                    skill.classList.add("show");
+                }, index*200);
+            });
+        }
     });
   </script>
 </body>
